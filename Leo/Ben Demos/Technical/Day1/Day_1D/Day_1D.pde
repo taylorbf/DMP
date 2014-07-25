@@ -5,5 +5,6 @@
 // and the old circles are erased.
 
 void draw() {
+  background(#FFFFFF);
   ellipse(mouseX,mouseY,40,40);
 }
