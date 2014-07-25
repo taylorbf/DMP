@@ -20,6 +20,10 @@ void setup() {
   destination = new NetAddress("localhost",4001);
 }
 
+void draw() {
+  
+}
+
 void mouseMoved() {
   // create an OSC message, declare path
   OscMessage msg = new OscMessage("/ben");
