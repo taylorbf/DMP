@@ -29,6 +29,21 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Avenir Medium",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-5",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 6.0, 621.0, 240.0, 56.0 ],
+					"text" : "Ben Taylor\nGoucher - Digital Arts Programming\nFall 2014"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Avenir Medium",
 					"fontsize" : 36.0,
 					"frgb" : 0.0,
 					"id" : "obj-15",
