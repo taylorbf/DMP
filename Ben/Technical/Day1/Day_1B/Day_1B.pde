@@ -2,7 +2,7 @@
 
 
 void setup() {
-  // Fix this sketich so it prints 3.5 in the console
+  // Fix this sketch so it prints 3.5 in the console
   // using the myNum variable.
 
   int mynum = 3.5;
