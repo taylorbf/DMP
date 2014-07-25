@@ -5,10 +5,11 @@ void setup() {
   // Debug this sketch so that it prints "Hello, World!" 
   // to console each frame using the intelligence variable.
   
-  String intelligence = "Hello, World!";
+  String intelligence= "Hello, World!";
   
 }
 
 void draw() {
+  String intelligence= "Hello, World!";
   println(intelligence);
 }
