@@ -16,7 +16,7 @@ void draw(){
   fill(#1E1CD6,20);
   rect(0,0,width,height);
   
-  fill(#E01261);
+  fill(#ff8800);
   noStroke();
   
   ellipse(b, 400+sin(a)*200.0, 200, 200 );
