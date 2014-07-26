@@ -1,6 +1,6 @@
 /* Iteration example - BT */
 
-float bubbles = 10000; // or try 10000 to make some noise
+float bubbles = 400; // or try 10000 to make some noise
 float row = sqrt(bubbles);
 float size;
 
