@@ -11,12 +11,16 @@ void setup() {
 }
 
 void draw(){
- for(float i=1;i<=220;i=i+20){
-  ellipse(i,20,20,20);
+  // define counter(i); do it 10 times; 3 
+ for(float i=0;i<10;i++){
+  ellipse((i+1)*20,20,20,20);
+
+//*also works*  
+//  for(float i=1;i<11;i++){
+//  ellipse(i*20,20,20,20); 
 }
  
-  //line(x, 0, x, height); 
-   
+//original   
   //ellipse(20,20,20,20);
   //ellipse(40,20,20,20);
   //ellipse(60,20,20,20);
