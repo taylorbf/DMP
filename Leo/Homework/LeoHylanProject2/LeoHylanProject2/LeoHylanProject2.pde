@@ -7,12 +7,12 @@ float x;
 float y;
 float w;
 void setup(){
-  size(500,500);
+  size(700,700);
   noStroke();
 }
 void mousePressed() {
-fill(mouseX,mouseY, 200);
-rect(0,0,500,500);
+fill(map(mouseX,0,width,0,255),map(mouseY,0,width,0,255), 200);
+rect(0,0,width,height);
 }
 void draw(){
  {
@@ -29,6 +29,7 @@ ellipse(x,y,diam,diam);
 }
   
 
-fill(mouseX,mouseY, 200);
+
+fill(map(mouseX,0,width,0,255),map(mouseY,0,width,0,255), 200);
 ellipse(mouseX,mouseY,50,50);
 }

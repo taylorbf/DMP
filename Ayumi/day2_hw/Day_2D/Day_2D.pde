@@ -6,9 +6,9 @@
 
 void setup() {
   
-  for (int i=0; i<5; i++) {
-    float m = map(i,);
-    println(i+m);
+  for (float i=0; i<5; i++) {
+   // float m = map(i,);
+    println(i);
   }
   
 }
