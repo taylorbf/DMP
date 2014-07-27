@@ -1,4 +1,4 @@
-float grid = 100;
+float grid = 1600;
 float row = sqrt(grid);
 float size;
 
@@ -15,6 +15,7 @@ void setup(){
 }
 
 void draw(){
+translate(0,-80);
 fill(#ffffff,20);
 rect(0,0,width, height); 
  
