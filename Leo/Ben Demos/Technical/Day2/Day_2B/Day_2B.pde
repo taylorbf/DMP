@@ -8,7 +8,7 @@ int answerToEverything = 42;
 
 void setup() {
   
-   if (answerToEverything = 42) {
+   if (answerToEverything == 42) {
        println("This is the restaurant at the end of the universe");
    }
    
