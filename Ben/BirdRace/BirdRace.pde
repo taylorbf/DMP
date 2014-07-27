@@ -1,5 +1,9 @@
 
-Parrot mybird = new Parrot();
+Parrot leobird = new Parrot(0);
+Parrot andrewbird = new Parrot(100);
+Parrot benbird = new Parrot(200);
+Parrot lindseybird = new Parrot(300);
+Parrot ayumibird = new Parrot(400);
 
 void setup() {
   size(1200,600);
@@ -8,16 +12,21 @@ void setup() {
 
 void draw() {
   background(#D8BA8A);
-  mybird.fly();
+  leobird.fly();
+  andrewbird.fly();
+  benbird.fly();
+  lindseybird.fly();
+  ayumibird.fly();
 }
 
 class Parrot {
   
   float x=0;
   float y=0;
+  float speed = random(5);
   
-  Parrot() {
-    
+  Parrot(float sety) {
+    y = sety;
   }
   
   void fly() {
@@ -46,7 +55,7 @@ class Parrot {
     rect(270,460,50,10);
     popMatrix();
     
-    x += 1;
+    x += speed;
     
   }
   
