@@ -19,7 +19,7 @@ void setup() {
 }
 
 void draw() {
-    background(20);
+    background(30);
     
     // mouseX position determines speed factor
   float factor = constrain(mouseX/10,0,5);
