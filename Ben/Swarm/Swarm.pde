@@ -1,5 +1,5 @@
 
-Bee[] hive = new Bee[100];
+Bee[] hive = new Bee[130];
 
 
 void setup(){
@@ -22,53 +22,53 @@ void draw(){
 
 class Bee {
  
- float x=0;
- float y=500;
- float speed=random(8);
+  float x=0;
+  float y=500;
+  float speed=random(8);
  
- Bee(float setx, float sety){
-   x = setx;
-   y = sety;
- }
-
-void fly() {
+  Bee(float setx, float sety){
+     x = setx;
+     y = sety;
+  }
   
-  pushMatrix();
-  translate(x,y);
-  scale(0.5, 0.5);
+  void fly() {
+    
+    pushMatrix();
+    translate(x-25,y);
+    scale(0.5, 0.5);
+    
+    fill(#F7CF2D);
+    ellipse(100,100, 40, 70);
+    fill(#000000);
+    ellipse(95,65,15,15);
+    ellipse(105,65,15,15);
+    fill(#000000);
+    rect(81,85,38,8);
+    rect(80,100,40,8);
+    fill(#ffffff, 120);
+    arc(130, 70, 50, 50, 0, PI);
+    arc(70, 70, 50, 50, 0, PI);
   
-  fill(#F7CF2D);
-  ellipse(100,100, 40, 70);
-  fill(#000000);
-  ellipse(95,65,15,15);
-  ellipse(105,65,15,15);
-  fill(#000000);
-  rect(81,85,38,8);
-  rect(80,100,40,8);
-  fill(#ffffff, 120);
-  arc(130, 70, 50, 50, 0, PI);
-  arc(70, 70, 50, 50, 0, PI);
-
-  popMatrix();
+    popMatrix();
+    
+    
+  }
   
-  
-}
-
-void buzz() {
-   x = x + random(-1,1); 
-   y = y + random(-1,1); 
-   y = y - 1;
-   if (y<-75) {
-      y = height; 
-   }
-   if (x<-75) {
-      x = width; 
-   }
-   if (x>width) {
-      x = -50; 
-   }
- 
-}
+  void buzz() {
+     x = x + random(-1,1); 
+     y = y + random(-1,1); 
+     y = y - 1;
+     if (y<-75) {
+        y = height; 
+     }
+     if (x<-75) {
+        x = width; 
+     }
+     if (x>width) {
+        x = -50; 
+     }
+   
+  }
 
 }
 
