@@ -38,8 +38,8 @@ void keyPressed(){
   noStroke();
  // fill(random(180,150),random(180,250),random(0,70),90);
   fill(random(100,255),random(100,255),random(100,255));
-
-  rect(0,0,800,800);
+  rectMode(CORNER);
+  rect(0,0,width,height);
 
 
 }
