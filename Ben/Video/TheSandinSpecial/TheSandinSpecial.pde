@@ -27,8 +27,7 @@ void draw() {
        color bw = video.pixels[i];
        // Get its brightness
        float howbright = brightness(bw);
-       // Round its brightness to either 0 or 255
-       //howbright = round(howbright/255)*255;
+       // Compare its brightness to our 5 custom ranges
        color c1;
        if (howbright<=49) {
           c1 = #ED3566;
