@@ -31,7 +31,7 @@ void draw() {
        //howbright = round(howbright/255)*255;
        color c1;
        if (howbright<=84) {
-          c1 = 0x4DFF0000;
+          c1 = 0x4DFFFF00;
        } else if (howbright>=85 && howbright<=169) {
           c1 = 0x4DFF00FF;
        }  else {
