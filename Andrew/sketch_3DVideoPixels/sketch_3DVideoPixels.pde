@@ -8,14 +8,14 @@
 import processing.video.*;
 
 // Size of each cell in the grid, in pixels
-int cellSize = 5;
+int cellSize = 20;
 //Initialize cols, rows, video capture
 int cols, rows;
 Capture video;
 
 
 void setup() {
-  size(640, 480,P3D);
+  size(960, 720,P3D);
   frameRate(30);
   noStroke();
   cols = width / cellSize;
@@ -28,6 +28,8 @@ void setup() {
 
 
 void draw() { 
+  fill(255,20);
+  rect(0,0,width,height);
   if (video.available()) {
     video.read();
     video.loadPixels();
@@ -55,6 +57,10 @@ void draw() {
         // Draw a rectangle with this color
         fill(c);
         pushMatrix();
+        translate(width/2,height/2);
+        rotateX(map(mouseY,0,width,0,TWO_PI));
+        rotateY(map(mouseX,0,height,0,TWO_PI));
+        translate(-width/2,-height/2);
         translate(x,y);
         box(cellSize, cellSize,abs(howbright-255)*2);
         popMatrix();
