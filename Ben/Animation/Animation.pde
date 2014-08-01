@@ -1,11 +1,12 @@
 /*
   Hi class,
   This animation library is nice!
-  To use it, you first need to import the library:
+  To use it, you first need to import the library.
   - Go to Sketch menu > Import Library > Add Library
   - Search for "Ani"
   - Select and install Ani
   This sketch should now work for you!
+  More info at: http://www.looksgood.de/libraries/Ani/
 */
 
 // Tell Processing that you want to use Ani
