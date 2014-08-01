@@ -27,7 +27,7 @@ void mousePressed() {
   // Animate the variable x to pixel 100 over 1.5 seconds.
   Ani.to(this,1.5,"x",100);
   
-  // Or, if you have a class Guy, with an instance guy, you could animate guy.x like this:
-  // Ani.to(guy,1.5,"x",100);
   
+  // If called from within a class
+  // it will refer to variables of that class.
 }
