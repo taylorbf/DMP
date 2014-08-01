@@ -1,11 +1,11 @@
 float x1,y1,x2,y2;
 
 float a = 0;
-float rad = 350;
+float rad = 105;
 float inc = TWO_PI/rad;
 
 float a1 = 0;
-float rad1 = 11;
+float rad1 = 300;
 float inc1 = TWO_PI/rad1;
 
 float r=0;
@@ -34,19 +34,19 @@ void draw(){
     r += rinc;
     g += ginc;
     b += binc;
-    if(r <=0 || r<=255){
+    if(r <=0 || r>=255){
       rinc = rinc*-1;
     }
-      if(g <=0 || g<=255){
+      if(g <=0 || g>=255){
       ginc = ginc*-1;
     }
-      if(b <=0 || b<=255){
+      if(b <=0 || b>=255){
       binc = binc*-1;
     }
     
     stroke(r,g,b);
     strokeWeight(0.5);
-    line(x1,y1,x2,y2);
+    line(x1,y1,x2+100,y2+100);
     
     a+=inc;
     a1+=inc1;

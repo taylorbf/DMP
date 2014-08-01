@@ -1,11 +1,11 @@
 float x1,y1,x2,y2;
 
 float a = 0;
-float rad = 350;
+float rad = 351;
 float inc = TWO_PI/rad;
 
 float a1 = 0;
-float rad1 = 11;
+float rad1 = 100;
 float inc1 = TWO_PI/rad1;
 
 float r=0;
@@ -21,8 +21,10 @@ void setup(){
 }
 
 void draw(){
-    
-   
+    rectMode(CORNER);
+    fill(255,20);
+    rect(0,0,width,height);
+     
     x1 = sin(a1)*rad1+width/2;
     y1 = cos(a1)*rad1+height/2;
     x2 = x1+sin(a)*rad;
@@ -45,8 +47,9 @@ void draw(){
     }
     
     stroke(r,g,b);
-    strokeWeight(0.5);
-    line(x1,y1,x2,y2);
+    strokeWeight(1);
+    rectMode(CENTER);
+    rect(x1,y1,x2,y2);
     
     a+=inc;
     a1+=inc1;

@@ -1,11 +1,11 @@
 float x1,y1,x2,y2;
 
 float a = 0;
-float rad = 350;
+float rad = 55;
 float inc = TWO_PI/rad;
 
 float a1 = 0;
-float rad1 = 11;
+float rad1 = 200;
 float inc1 = TWO_PI/rad1;
 
 float r=0;
