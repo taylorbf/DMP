@@ -12,18 +12,35 @@ void setup(){
    for (int i=0;i<galaxy.length;i=i+1) {
     galaxy[i].blink();
   }
+  tower.display();
 
 }
 
 
 void draw(){
   noStroke();
+    fill(#101E43);
+  rect(0,0,width,height);
+ 
+ //Galaxy code start
+  for (int i=0;i<galaxy.length;i=i+1) {
+  galaxy[i]= new Star(random(width), random(height));
+  } 
+  for (int i=0;i<galaxy.length;i=i+1) {
+    galaxy[i].blink();
+  }
+   //Galaxy code stop 
+
+
 //Mountain
 fill(#0E9B0C);
-triangle(width-340,height, 0,height,height/2,height-400); 
+triangle(660,height, 0,height, 300,200); 
   guy.display();
-  tower.display();
+  guy.walk();
+  
   tower.stretch();
+  tower.display();
+
 
 //arch
 strokeWeight(40);
@@ -43,3 +60,5 @@ arc(width/1.5, height, 550, height, 0, TWO_PI);
   rect(width*.68,height-150,150,150);
   //translate(mouseX, mouseY);
   }
+ 
+

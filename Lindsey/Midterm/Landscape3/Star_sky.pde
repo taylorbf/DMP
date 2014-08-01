@@ -27,7 +27,7 @@ Star[] galaxy = new Star[600];
   
  }
 
-void keyPressed(){
+/*void keyPressed(){
   fill(#101E43);
   rect(0,0,width,height);
   for (int i=0;i<galaxy.length;i=i+1) {
@@ -39,4 +39,4 @@ void keyPressed(){
   }
       guy.walk();
 
-  }
+  }*/
