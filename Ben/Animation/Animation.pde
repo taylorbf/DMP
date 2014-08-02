@@ -27,7 +27,6 @@ void mousePressed() {
   // Animate the variable x to pixel 100 over 1.5 seconds.
   Ani.to(this,1.5,"x",100);
   
-  
   // If called from within a class
   // it will refer to variables of that class.
 }
