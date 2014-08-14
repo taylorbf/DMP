@@ -11,7 +11,7 @@ Back groundBack3;
 Back groundBack4;*/
 
 void setup(){
-  size (1440,1280);
+  size (displayWidth ,displayHeight);
   //groundBack = new Back (0, 0, 0, 10,500,500);
   //groundBack2 = new Back (0, 0, 0, 100, 0, 0);
   //groundBack3= new Back (0, 0, 0, 100, 0, 0);
