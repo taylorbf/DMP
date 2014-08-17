@@ -3,16 +3,18 @@ Serial port;
 float distance = 0;
 
 void setup(){
- port = new Serial(this, "3", 9600);
- // /dev/tty.usbmodem1411
- port.bufferUntil("\n");
+  size(500,500);
+ port = new Serial(this, "/dev/tty.usbmodem1411", 9600);
+
 }
 
 void draw(){
+  println(distance);
   background(0,0,distance);
 }
 
 
 void serialEvent (Serial port){
- distance = float(port.readStringUntil("\n")); 
+ distance = float(port.readString()); 
 }
+
