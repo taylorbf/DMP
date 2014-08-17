@@ -9,9 +9,8 @@ Capture video;
 
 void setup() {
   size(640, 480, P3D);
-  canvas = createGraphics(640, 480, P3D);
+  canvas = createGraphics(width, height, P3D);
   frameRate(30);
-  
   cols = width / cellSize;
   rows = height / cellSize;
   server = new SyphonServer(this, "Processing Syphon");
@@ -23,31 +22,23 @@ void setup() {
 
 
 void draw() { 
+    if (video.available()) {
+        video.read();
+        video.loadPixels();
   
-    
-  
-  if (video.available()) {
-    video.read();
-    video.loadPixels();
-  
-  
-    // Begin loop for columns
-      for (int i = 0; i < cols; i++) {
-      // Begin loop for rows
-      for (int j = 0; j < rows; j++) {
+    for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
       
-        // Where are we, pixel-wise?
         int x = i*cellSize;
         int y = j*cellSize;
-        int loc = (video.width - x - 1) + y*video.width; // Reversing x to mirror the image
+        int loc = (video.width - x - 1) + y*video.width; 
       
-        // Make a new color for this pixel of the video
         float r = red(video.pixels[loc]);
         float g = green(video.pixels[loc]);
         float b = blue(video.pixels[loc]);
-        color c = color(r, g, b);
+        float a = 50;
+        color c = color(r+255, g, b-255, a);
       
-        // Draw a rectangle with this color
         canvas.beginDraw();
         canvas.noStroke();
         canvas.fill(c);
