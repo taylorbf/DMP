@@ -41,9 +41,9 @@ void loop()
   // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
   pinMode(pingPin, OUTPUT);
   digitalWrite(pingPin, LOW);
-  delayMicroseconds(1000);
+  delayMicroseconds(2);
   digitalWrite(pingPin, HIGH);
-  delayMicroseconds(500);
+  delayMicroseconds(5);
   digitalWrite(pingPin, LOW);
 
   // The same pin is used to read the signal from the PING))): a HIGH
@@ -56,11 +56,15 @@ void loop()
   inches = microsecondsToInches(duration);
   cm = microsecondsToCentimeters(duration);
   
+   /*
   Serial.print(inches);
   Serial.print("in, ");
   Serial.print(cm);
   Serial.print("cm");
   Serial.println();
+  */
+  Serial.write(cm); 
+  
   
   delay(100);
 }

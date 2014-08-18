@@ -1,6 +1,6 @@
 
 
-Circle [] bubbles = new Circle [0];
+/*Circle [] bubbles = new Circle [0];
  
  
 void setup () {
@@ -27,7 +27,7 @@ void draw () {
     //deletes oldest Circle so that no more than 40 Circles are present
   }
    
-}
+}*/
  
 class Circle {
   
@@ -48,8 +48,8 @@ class Circle {
   float grow;
    
   Circle () {
-    x = mouseX;
-    y = mouseY;
+    x = val*3;
+    y = val*2;
      
     velX = random (-30,30);
     velY = random (-10,10);
@@ -83,17 +83,17 @@ class Circle {
     fill (b);
     ellipse (x,y,CircleSize,CircleSize);
  
-  if (mouseX > 0 && mouseX < 400) {
+  if (val >=0 && val < 50) {
     fill(b);
     ellipse (x,y,CircleSize,CircleSize);
   }
     
-  if (mouseX > 400 && mouseX < 800) {
+  if (val >=51 && val < 120) {
     fill(r);
     ellipse (x,y,CircleSize,CircleSize);
   }
    
-  if (mouseX > 800 && mouseX < width) {
+  if (val >=121 && val < 250) {
     fill(g);
     ellipse (x,y,CircleSize,CircleSize);
   }
