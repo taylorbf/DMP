@@ -31,9 +31,6 @@ class Triangle{
     if (x > 50 || x < 0){
       incx *= -1;
     }
-  
-
-    
-    
+    translate(-x,0);
   }
 }
