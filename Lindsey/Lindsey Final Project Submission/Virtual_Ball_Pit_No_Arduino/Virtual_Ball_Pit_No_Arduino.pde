@@ -1,13 +1,16 @@
+/*
+Just in case anyone wants to test this out on their own, 
+here's a version of my final sketch controlled by mouse movement,
+rather than Arduino.
+*/
 
-
-/*Circle [] bubbles = new Circle [0];
+Circle [] bubbles = new Circle [0];
  
  
 void setup () {
  size (1200,700);
- frameRate(15);
  noStroke ();
-
+ frameRate(15);
 }
  
  
@@ -27,7 +30,7 @@ void draw () {
     //deletes oldest Circle so that no more than 40 Circles are present
   }
    
-}*/
+}
  
 class Circle {
   
@@ -48,8 +51,8 @@ class Circle {
   float grow;
    
   Circle () {
-    x = val*3;
-    y = val*2;
+    x = mouseX;
+    y = mouseY;
      
     velX = random (-30,30);
     velY = random (-10,10);
@@ -83,22 +86,21 @@ class Circle {
     fill (b);
     ellipse (x,y,CircleSize,CircleSize);
  
-  if (val >=0 && val < 50) {
+  if (mouseX > 0 && mouseX < 400) {
     fill(b);
     ellipse (x,y,CircleSize,CircleSize);
   }
     
-  if (val >=51 && val < 120) {
+  if (mouseX > 400 && mouseX < 800) {
     fill(r);
     ellipse (x,y,CircleSize,CircleSize);
   }
    
-  if (val >=121 && val < 250) {
+  if (mouseX > 800 && mouseX < width) {
     fill(g);
     ellipse (x,y,CircleSize,CircleSize);
   }
  }
 
 }
-
 

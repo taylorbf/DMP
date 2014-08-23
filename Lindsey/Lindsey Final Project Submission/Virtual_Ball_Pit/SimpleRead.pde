@@ -38,14 +38,7 @@ void draw(){
 
 void serialEvent (Serial myPort) {
   String bufferString = myPort.readStringUntil('\n');
-        if (val >= 50 && val < 100){
-        fill(204,200,15);   
-        rect(50,50, 100, 100);
-        }
-       else if (val < 50 || val > 100) {   
-        fill(0,200,15);   
-        rect(50,50, 100, 100);
-       }
+      
     
 }
 
